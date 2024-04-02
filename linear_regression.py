@@ -32,7 +32,7 @@ for epoch in range(num_epochs):
     loss.backward()
     optimizer.step()
     if (epoch + 1) % 10 == 0:
-        print('Epoch [{}/{}], Loss: {:.4f}'.format(epoch+1, num_epochs, loss.item()))
+        print('Epoch [{}/{}], Loss: {:.4f}'.format(epoch + 1, num_epochs, loss.item()))
 
 # test model
 with torch.no_grad():
