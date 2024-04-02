@@ -31,7 +31,7 @@ for epoch in range(num_epochs):
     optimizer.zero_grad()
     loss.backward()
     optimizer.step()
-    if (epoch+1) % 10 == 0:
+    if (epoch + 1) % 10 == 0:
         print('Epoch [{}/{}], Loss: {:.4f}'.format(epoch+1, num_epochs, loss.item()))
 
 # test model
