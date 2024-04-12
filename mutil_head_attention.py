@@ -22,7 +22,7 @@ class MultiHeadedAttention(nn.Module):
         # We assume d_v always equals d_k
         self.d_k = d_model // h
         self.h = h
-        # define W^q, W^k, W^v和W^o matrix, w_list
+        # define W^q, W^k, W^v and W^o matrix, w_list
         self.linear_list = [
             nn.Linear(d_model, d_model),
             nn.Linear(d_model, d_model),
