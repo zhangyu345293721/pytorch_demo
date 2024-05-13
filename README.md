@@ -1,1 +1,1 @@
-pytorch  use demo
+pytorch study demo
