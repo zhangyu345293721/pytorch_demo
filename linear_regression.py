@@ -16,7 +16,7 @@ class LinearRegression(nn.Module):
     def forward(self, x):
         return self.linear(x)
 
-# define model and optimizer
+# init model and optimizer
 input_size = 1  # input featrue
 output_size = 1  # output feature
 model = LinearRegression(input_size, output_size)
