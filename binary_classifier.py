@@ -21,7 +21,7 @@ class LinearClassifier(nn.Module):
     def forward(self, x) -> object:
         return self.linear(x)
 
-# model parameter 
+# init model and model parameter init 
 input_size = 2  
 output_size = 2  
 model = LinearClassifier(input_size, output_size)
