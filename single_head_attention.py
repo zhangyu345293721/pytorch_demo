@@ -40,7 +40,7 @@ class SingleHeadAttention(nn.Module):
         # 通过最终的线性层
         return self.out_linear(x)
 
-    def attention(self, query: torch.Tensor, key: torch.Tensor, value: torch.Tensor) -> torch.Tensor:
+    def attention(self, query: torch.Tensor, key: torch.Tensor, value: torch.Tensor, masked : torch.Tensor) -> torch.Tensor:
         """
         计算注意力值
 
