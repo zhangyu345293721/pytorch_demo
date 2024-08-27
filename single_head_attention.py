@@ -56,7 +56,8 @@ class SingleHeadAttention(nn.Module):
         
         # 计算分数
         scores = torch.matmul(query, key.transpose(-2, -1)) / math.sqrt(d_k)
-        
+        if masked:
+            scores = scores.masked_fill(masked == 0, float("inf")
         # 对分数进行softmax操作
         p_attn = scores.softmax(dim=-1)
         
