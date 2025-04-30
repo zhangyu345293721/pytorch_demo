@@ -4,7 +4,7 @@ def pool2d(input_matrix, kernel_size, stride, mode='max'):
     """
     2D 池化操作
     
-    Parameters:
+    Args:
     - input_matrix (ndarray): 输入矩阵（2D 数组）。
     - kernel_size (int): 池化核的大小（假设为正方形核）。
     - stride (int): 步幅大小。
