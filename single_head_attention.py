@@ -49,7 +49,7 @@ class SingleHeadAttention(nn.Module):
         scores = torch.matmul(query, key.transpose(-2, -1)) / math.sqrt(d_k)
 
         if mask:
-            scores = scores.masked_fill(mask == 0, float("-inf"))
+            scores = scores.masked_fill(mask == 1, float("-inf"))
         # softmax
         soft_score = scores.softmax(dim=-1)
         return torch.matmul(soft_score, value)
