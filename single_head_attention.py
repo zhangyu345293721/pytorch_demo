@@ -14,13 +14,13 @@ class SingleHeadAttention(nn.Module):
 
     def forward(self, input: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
         """
-            forward tensor
+            forward tensor, compute attention score
         Args:
             input: input tensor
             mask: masked matrix
 
         Returns:
-            tensor
+            tensor attention score value
         """
         query = self.query_linear(input)
         key = self.key_linear(input)
